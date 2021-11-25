@@ -1,0 +1,54 @@
+# data parameters
+dataset_name: Visual Genome
+image_dir: ../data/VisualGenome/images
+h5_path: ../data/VisualGenome/train.h5
+vocab_path: '../data/VisualGenome/vocab.json'
+
+batch_size: 48
+image_size: 128
+max_obj_num: 1
+mask_batch_same: False   #same mask for same batch
+max_delta_shape: [32, 32]
+margin: [0, 0]
+discounted_mask: True
+spatial_discounting_gamma: 0.9
+random_crop: True
+mask_type: object     # hole | mosaic
+mosaic_unit_size: 12
+
+# training parameters
+cuda: True
+gpu_ids: [0]    # set the GPU ids to use, e.g. [0] or [1, 2]
+num_workers: 7
+resume:
+mask_shape: 64
+lr: 0.0001
+beta1: 0.5
+beta2: 0.9
+n_critic: 5   # when would compute g loss
+niter: 500000
+print_iter: 1
+viz_iter: 1
+snapshot_save_iter: 1
+viz_max_out: 12
+
+# test parameters
+test_result: ./result
+test_load: ./checkpoints/Visual Genome/model/weights_1.pth
+
+# loss weight
+coarse_l1_alpha: 1.2
+l1_loss_alpha: 1.2
+ae_loss_alpha: 1.2
+global_wgan_loss_alpha: 1.
+gan_loss_alpha: 0.001
+wgan_gp_lambda: 10
+
+# network parameters
+netG:
+  input_dim: 3
+  ngf: 32
+
+netD:
+  input_dim: 3
+  ndf: 64
