@@ -8,6 +8,7 @@ pip install torchvision>=0.8.2
 pip install pyyaml
 pip install tensorboardX   (pip install tensorflow)
 pip install torchsummary>=1.5.1
+pip install piq
 ```
 
 ## Implementation
@@ -15,7 +16,7 @@ pip install torchsummary>=1.5.1
 - prepare **Visual Genome** dataset 
 ```
 $ bash scripts/download_vg.sh
-$ python scripts/preprocess_vg.py
+$ bash scripts/preprocess_vg.sh
 ```
 
 - prepare **Places2** dataset <br>
