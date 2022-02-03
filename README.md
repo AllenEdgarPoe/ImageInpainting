@@ -1,4 +1,4 @@
-# Image Inpainting Module package
+# Image Inpainting Module package (UNFINISHED)
 - This Repository is a package for various Image-Inpainting networks, such as EdgeConnect and Generative-contextual-attention model. 
 
 ## Requirements
