@@ -16,7 +16,7 @@ pip install piq
 - prepare **Visual Genome** dataset 
 ```
 $ bash scripts/download_vg.sh
-$ bash scripts/preprocess_vg.sh
+$ python scripts/preprocess_vg.py
 ```
 
 - prepare **Places2** dataset <br>
